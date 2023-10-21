@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_C_VH_TOOL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Constants and value checks for value help tool</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check value against fixed_values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DIALOG_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value help dialog types</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get instance</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_DIALOG_TYPE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid value help dialog type passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_SELECTION_TYPE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid selection type passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_VH_TYPE_VALID</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Valid value help type passed?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SELECTION_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection types which screen fields should be read</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SINGLETON_INSTANCE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Instance of the class itself</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>VH_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value help types</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>PARAM_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of field/parameter for output in error message</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value under test</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_AGAINST_FIXED_VALUES</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search/value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_INSTANCE</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Class instance</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_DIALOG_TYPE_VALID</CMPNAME>
+     <SCONAME>DIALOG_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value help dialog type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_DIALOG_TYPE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search/value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_SELECTION_TYPE_VALID</CMPNAME>
+     <SCONAME>SELECTION_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_SELECTION_TYPE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search/value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_VH_TYPE_VALID</CMPNAME>
+     <SCONAME>VH_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value help type</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_VH_TYPE_VALID</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search/value help</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,871 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_CA_VH_TOOL</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>CA-TBX: Value help supporting tool</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>ASSIGN_VH_FIELD_TO_SCR_FIELD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set corresponding search help field name for screen field</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Call value/search help</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constructor</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>CONVERT_VALUE_FOR_SCR_OUTPUT</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Convert selected value for screen field output</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>DOES_VH_FIELD_NAME_EXIST</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Check if requested field is defined in value/search help</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SCREEN_FIELD_ENTRY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get screen field (field name + value + input flag)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get value of screen field</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGISTER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get screen field from registration table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TABLE_CONTROL_ROW_INDEX</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get table control row index to be used</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get techn. descr. of value help incl. already set values</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_TECHN_FIELD_DESCRIPTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get technical description of field</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_VH_FIELD_NAME_2_SCR_FIELD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get value help field name from screen field name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>IS_VALUE_HELP_SET</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Is value/search help set?</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MODIFY_REGISTRATION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Modify registration table</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MO_VH_OPTIONS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Constants and value checks for value/search help tool</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MS_VH_DESCRIPTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Description of value/search help</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_SCR_FIELD_REGISTER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Registered screen fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_ACTUAL_TABLE_CTRL_ROW</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Actual step loop index for value help call in table control</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_PROGNAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Program name for value/search help call</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_SCREEN_NO</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen / dnypro number for value/search help call</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Determine exception and raise it after value help call</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>READ_FIELD_VALUES_FROM_SCREEN</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Read current values from screen for registered fields</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>REGISTER_SCREEN_FIELD</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Add / register screen field</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_DIALOG_TYPE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set a new/other dialog type for value/search help</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set screen field value into buffer</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set default value for a selection field of value/search help</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_SEL_FIELD_DISPLAY_ONLY</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set selection field of value help to display-only or input</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>SET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Set techn. value help descr. (overwrites actual descr.!)</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TRANSFER_SEL_VAL_INTO_REGISTER</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Transfer selected values into field registration</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>TRANSFER_VALUES_INTO_VH_DESCR</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Transfer values into techn. VH description for execution</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Write selected values into (all) registered screen fields</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>ADD_SCR_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ASSIGN_VH_FIELD_TO_SCR_FIELD</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ASSIGN_VH_FIELD_TO_SCR_FIELD</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ASSIGN_VH_FIELD_TO_SCR_FIELD</CMPNAME>
+     <SCONAME>IV_VH_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of corresponding field in value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>ASSIGN_VH_FIELD_TO_SCR_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_SEARCH_HELP</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IT_VH_SELECT_OPT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection options for value/search helps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_CONVERT_TO_EXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Convert value into external type of receiver field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_MAX_HITS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Restrict hits of selection list</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_ONLY_INPUT_FLDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Set only for input fields; 0 = Set also for display flds</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_POS_AT_COLUMN</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Horizontal position on screen (column)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_POS_AT_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Vertical position on screen (row/line)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_RETURN_FIELD</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Receiving dynpro field, if empty set all registered fields</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_SET_TO_SCREEN</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Set selected value directly into screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_TITLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Title for popup (overwriting standard)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>IV_USE_SCREEN_VAL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Use entered value for selection screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = User cancelled -&gt; if not supplied a message is send</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>ZCX_CA_UI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: UI interaction messages</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CALL_F4_VALUE_HELP</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CHECK_EXISTENCE_SHLP_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_PROGNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ABAP Program Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_SCREEN_NO</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Current Screen Number</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_VH_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of a value help / table name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>IV_VH_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Type of an input help (use ZCL_CA_C_VH_TOOL=&gt;VH_TYPE-*)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONSTRUCTOR</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_VALUE_FOR_SCR_OUTPUT</CMPNAME>
+     <SCONAME>CS_REGISTRATION_ENTRY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field registration entry</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_VALUE_FOR_SCR_OUTPUT</CMPNAME>
+     <SCONAME>CX_SY_ASSIGN_ERROR</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>System Exception Using ASSIGN</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>CONVERT_VALUE_FOR_SCR_OUTPUT</CMPNAME>
+     <SCONAME>ZCX_CA_CONV</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Conversion failed</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DOES_VH_FIELD_NAME_EXIST</CMPNAME>
+     <SCONAME>IV_VH_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field name of corresponding field in value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>DOES_VH_FIELD_NAME_EXIST</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_ENTRY</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_ENTRY</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_ENTRY</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field of the current screen (with value)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_ENTRY</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>EV_IS_CHANGABLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = The field is an input field; &apos; &apos; = Display only</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>EV_SCR_FIELD_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Value of screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_CONVERT_TO_INT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Convert value into interal type of receiver field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGISTER</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGISTER</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGISTER</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field of the current screen (with value)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGISTER</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_FROM_REGTAB</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SCR_FIELD_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_SHLP_DESCR</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TABLE_CONTROL_ROW_INDEX</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TABLE_CONTROL_ROW_INDEX</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Table control row index to be used</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Technical description of value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHN_DESCR</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHN_FIELD_DESCRIPTION</CMPNAME>
+     <SCONAME>IS_REGISTRATION_ENTRY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field registration entry</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHN_FIELD_DESCRIPTION</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Technical description of screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_TECHN_FIELD_DESCRIPTION</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VH_FIELD_NAME_2_SCR_FIELD</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VH_FIELD_NAME_2_SCR_FIELD</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VH_FIELD_NAME_2_SCR_FIELD</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Field of value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_VH_FIELD_NAME_2_SCR_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_SHLP_SET</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_VALUE_HELP_SET</CMPNAME>
+     <SCONAME>IV_RAISE_EXCEP</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Raise exception if no value/search help is set</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_VALUE_HELP_SET</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Value/search help is set</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>IS_VALUE_HELP_SET</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MODIFY_REGISTRATION</CMPNAME>
+     <SCONAME>IS_REGISTRATION_ENTRY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field registration entry</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MODIFY_REGISTRATION</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>MODIFY_SCR_FIELD_IN_REGTAB</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <SCONAME>IV_RESULT_IS_SUPPLIED</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = VH-call-method parameter is supplied / &apos; &apos;=Raise except</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <SCONAME>IV_RETURN_CODE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Return code of value help call</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Display only</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <SCONAME>ZCX_CA_UI</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: UI interaction messages</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>RAISE_EXCEPTION_AFTER_VH_CALL</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REGISTER_SCREEN_FIELD</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REGISTER_SCREEN_FIELD</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REGISTER_SCREEN_FIELD</CMPNAME>
+     <SCONAME>IV_VH_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Name of corresponding field in value help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>REGISTER_SCREEN_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_DIALOG_TYPE</CMPNAME>
+     <SCONAME>IV_DIALOG_TYPE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Dialog type (MO_OPTIONS-&gt;DIALOG_TYPE-*, see docu DDSHDIATYP)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_DIALOG_TYPE</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_CONVERT_TO_EXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Convert value into external type of receiver field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_CURRENCY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Currency Key</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control line (SY-STEPL)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>New value for screen field (otherwise use value from buffer)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>IV_UNIT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Base Unit of Measure</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCREEN_FIELD_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SCR_FIELD_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SELFLD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SELFLD_DISPL_INPUT</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>IV_DEFAULT_VALUE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Default value for selection field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>IV_USE_SCREEN_VAL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Use value from registered screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_CONV</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Conversion failed</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DEFAULT_VALUE</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DISPLAY_ONLY</CMPNAME>
+     <SCONAME>IV_DISPLAY_ONLY</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Set to dispaly-only; &apos; &apos; = set for input</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DISPLAY_ONLY</CMPNAME>
+     <SCONAME>IV_IDX_TABLE_CTRL_ROW</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Index of the table control row (SY-STEPL) -&gt; see REGISTER...</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DISPLAY_ONLY</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Screen field name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SEL_FIELD_DISPLAY_ONLY</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SHLP_DESCR</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SHLP_DIALOG_TYPE</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_SHLP_FIELD_FOR_SCR_FIELD</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <SCONAME>IS_VH_DESCRIPTION</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Technical description of value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_TECHNICAL_DESCRIPTION</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>SET_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>ZCX_CA_SH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_SEL_VAL_INTO_REGISTER</CMPNAME>
+     <SCONAME>IT_SEL_VALUES</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Description</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_SEL_VAL_INTO_REGISTER</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_VALUES_INTO_VH_DESCR</CMPNAME>
+     <SCONAME>IT_VH_SELECT_OPT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Selection options for value/search helps</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_VALUES_INTO_VH_DESCR</CMPNAME>
+     <SCONAME>IV_TITLE</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Title for popup (overwriting standard)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_VALUES_INTO_VH_DESCR</CMPNAME>
+     <SCONAME>IV_USE_SCREEN_VAL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Use entered value for selection screen field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>TRANSFER_VALUES_INTO_VH_DESCR</CMPNAME>
+     <SCONAME>RESULT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Display only</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>IV_CONVERT_TO_EXT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Convert value into external type of receiver field</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>IV_ONLY_INPUT_FLDS</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>X = Set only for input fields; 0 = Set also for display flds</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>IV_SCR_FIELD_NAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Update only this screen field (if empty all registrd fields)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>ZCX_CA_CONV</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: Conversion failed</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>WRITE_VALUES_INTO_SCR_FIELDS</CMPNAME>
+     <SCONAME>ZCX_CA_VH_TOOL</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Common exception: While calling/supporting value/search help</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
