@@ -4,8 +4,10 @@
   <asx:values>
    <DD02V>
     <TABNAME>ZCA_S_DYNPREAD</TABNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
     <TABCLASS>INTTAB</TABCLASS>
     <LANGDEP>X</LANGDEP>
+    <DDTEXT>CA-TBX: Enhanced stucture of DYNPREAD for value help support</DDTEXT>
     <MASTERLANG>E</MASTERLANG>
     <EXCLASS>4</EXCLASS>
    </DD02V>
@@ -15,7 +17,7 @@
      <ADMINFIELD>0</ADMINFIELD>
      <PRECFIELD>DYNPREAD</PRECFIELD>
      <MASK>      S</MASK>
-     <DDTEXT>Felder des aktuellen Dynpros mit Werten</DDTEXT>
+     <DDTEXT>Fields of the current screen (with values)</DDTEXT>
      <COMPTYPE>S</COMPTYPE>
      <GROUPNAME>S_DYNPREAD</GROUPNAME>
     </DD03P>
@@ -35,15 +37,6 @@
      <REFTYPE>C</REFTYPE>
     </DD03P>
    </DD03P_TABLE>
-   <I18N_LANGS>
-    <LANGU>E</LANGU>
-   </I18N_LANGS>
-   <DD02_TEXTS>
-    <item>
-     <DDLANGUAGE>E</DDLANGUAGE>
-     <DDTEXT>CA-TBX: Enhanced stucture of DYNPREAD for value help support</DDTEXT>
-    </item>
-   </DD02_TEXTS>
   </asx:values>
  </asx:abap>
 </abapGit>
