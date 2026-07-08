@@ -702,12 +702,13 @@ CLASS zcl_ca_vh_tool IMPLEMENTATION.
               DATA(lr_vh_field_descr) = REF #( ms_vh_description-fielddescr[
                                                       fieldname = is_registration_entry-vh_field_name ] OPTIONAL ).
               "Get data description of program field
-              IF lr_vh_field_descr->rollname IS NOT INITIAL.
+              IF lr_vh_field_descr IS BOUND AND
+                 lr_vh_field_descr->rollname IS NOT INITIAL.
                 result ?= NEW zcl_ca_ddic( iv_name = lr_vh_field_descr->rollname )->mo_type_desc.
               ENDIF.
             ENDIF.
 
-            IF result      IS NOT BOUND   AND
+            IF result      IS NOT BOUND  AND
                mv_progname IS NOT INITIAL.
               "Otherwise try to get the description for the program field. Field is no DDIC field - assign
               "program field and get the description via the "value".
